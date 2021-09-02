@@ -1,18 +1,11 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.stream.Stream;
 
 public class Test {
     public static void main(String[] args) {
 
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add(0,"A");
-        arrayList.add("B");
-        arrayList.add("C");
-        arrayList.add(4,"D");
-        System.out.print(arrayList);
-
-
+        Stream<Integer> stream = Stream.of(6, 8, 4, 2, 1, 5);
+        Integer answer = stream.reduce(9, (e1, e2) -> Math.max(e1, e2));
+        System.out.println("answer = " + answer);
     }
 }
 
