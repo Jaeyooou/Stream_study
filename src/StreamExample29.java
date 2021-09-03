@@ -26,8 +26,10 @@ public class StreamExample29 {
         Stream<String> stream1 = Stream.of("1", "2", "3", "4", "5", "6");
         System.out.println(stream1.map(e -> Integer.parseInt(e)).collect(Collectors.reducing(Math::min)).get());
 
-        Stream<String> stream2 = Stream.of("1", "2", "3", "4", "5", "6").collect(Collectors.reducing(Integer.MAX_VALUE, Integer::parseInt, Math::min));
+        System.out.println(Stream.of("1", "2", "3", "4", "5", "6")
+                .collect(Collectors.reducing(Integer.MAX_VALUE, Integer::parseInt, Math::min)));
         
+
     }
 
 }
