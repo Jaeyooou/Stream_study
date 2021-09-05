@@ -12,5 +12,7 @@ public class StreamExample3 {
 
             }
         });
+        Stream.of(1, 2, 3, 4, 5).parallel().forEach(System.out::println);
+
     }
 }
