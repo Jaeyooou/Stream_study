@@ -16,7 +16,9 @@ public class StreamExample34 {
         //2배로 증식 후 List 로 Collecting
         System.out.println(Stream.of(1, 2, 3, 4, 5, 6).collect(Collectors.flatMapping(e -> Stream.of(e, e), Collectors.toList())));
 
-        System.out.println(Stream.of(1, 2, 3, 4, 5, 6).collect(Collectors.filtering(e -> e % 2 == 1, Collectors.toList())));
+        System.out.println(Stream.of(1, 2, 3, 4, 5, 6)
+                .collect(Collectors.filtering(e -> e % 2 == 1
+                        , Collectors.toList())));
 
     }
 
